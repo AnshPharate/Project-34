@@ -6,7 +6,7 @@ const body = Matter.Body;
 const Render= Matter.Render;
 const Constraint = Matter.Constraint;
 
-
+var suspender1,suspender2,suspender3,suspender4,suspender5;
 function setup() {
 	createCanvas(800, 400);
 
@@ -24,11 +24,11 @@ bob5=new Bob(500,350,50);
 //bob6=new Bob(150,250,30);
  //fill ("brown");
   ground1 = new Ground(400,100,300,40);
-  sling1= new Suspender(bob1.body,ground1.body,-50*2,0);
-  sling2= new Suspender(bob2.body,ground1.body,-25*2,0);
-  sling3= new Suspender(bob3.body,ground1.body,-0*2,0);
-  sling4= new Suspender(bob4.body,ground1.body,25*2,0);
-  sling5= new Suspender(bob5.body,ground1.body,50*2,0);
+  suspender1= new Suspender(bob1.body,ground1.body,-50*2,0);
+  suspender2= new Suspender(bob2.body,ground1.body,-25*2,0);
+  suspender3= new Suspender(bob3.body,ground1.body,-0*2,0);
+  suspender4= new Suspender(bob4.body,ground1.body,25*2,0);
+  suspender5= new Suspender(bob5.body,ground1.body,50*2,0);
   //sling6= new Suspender(bob6.body,ground1.body,-40*2,0);
 	Engine.run(engine);
   
@@ -39,7 +39,7 @@ function draw() {
   background(100);
 //	ground.fill(48,22,8);
 	//ground.stroke(0);
-  rectMode(CENTER);
+  rectMode(CENTER)
   Engine.update(engine);
   bob1.display();
   bob2.display();
